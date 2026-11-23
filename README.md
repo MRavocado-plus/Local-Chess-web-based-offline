@@ -7,7 +7,7 @@ Checkmate is a browser-based two-player chess game made with HTML, CSS, and Java
 
 You can play the game online here:
 
-[Play Checkmate](https://YOUR-USERNAME.github.io/YOUR-REPOSITORY-NAME/ )
+[Play Checkmate](https://mravocado-plus.github.io/Local-Chess-web-based-offline/ )
 
 Replace the link above with your real GitHub Pages link after you enable GitHub Pages.
 
