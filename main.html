@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta
+    name="description"
+    content="Checkmate — a local two-player chess game in your browser."
+  >
+
+  <title>Checkmate | Browser Chess</title>
+  <link rel="stylesheet" href="dis.css">
+  <script src="game.js" defer></script>
+</head>
+<body>
+  <main class="app-shell">
+    <header class="site-header">
+      <div>
+        <p class="eyebrow">LOCAL TWO-PLAYER CHESS</p>
+        <h1>Checkmate</h1>
+        <p class="subtitle">
+          A simple chessboard for two people sharing one screen.
+        </p>
+      </div>
+      <button
+        id="new-game"
+        class="button button-primary"
+        type="button"
+      >
+        New game
+      </button>
+    </header>
+    <section
+      class="game-layout"
+      aria-label="Chess game"
+    >
+      <div class="board-wrap">
+
+        <div
+          id="board"
+          class="board"
+          role="grid"
+          aria-label="Chess board"
+        ></div>
+        <div class="board-footer">
+          <span>
+            <span class="legend-dot light"></span>
+            White starts
+          </span>
+          <span id="turn-label">
+            White to move
+          </span>
+        </div>
+      </div>
+      <aside class="side-panel">
+        <section class="card status-card">
+          <div class="status-heading">
+            <span
+              id="turn-dot"
+              class="turn-dot white-dot"
+            ></span>
+            <div>
+              <p class="eyebrow">GAME STATUS</p>
+
+              <h2 id="status-title">
+                White to move
+              </h2>
+            </div>
+          </div>
+          <p
+            id="status-message"
+            class="status-message"
+          >
+            Select a piece to see its legal moves.
+          </p>
+          <button
+            id="undo"
+            class="button button-secondary"
+            type="button"
+          >
+            Undo move
+          </button>
+        </section>
+        <section class="card help-card">
+          <h2>How to play</h2>
+          <ul>
+            <li>
+              Click a piece, then click a highlighted square.
+            </li>
+            <li>
+              White and black take turns on the same device.
+            </li>
+            <li>
+              Castling, en passant, promotion, check,
+              checkmate, and stalemate are supported.
+            </li>
+          </ul>
+        </section>
+        <section class="card moves-card">
+          <div class="moves-heading">
+            <h2>Move history</h2>
+            <span id="move-count">
+              0 moves
+            </span>
+          </div>
+          <ol
+            id="move-list"
+            class="move-list"
+            aria-label="Move history"
+          ></ol>
+        </section>
+      </aside>
+    </section>
+    <footer class="site-footer">
+      <p>
+        No downloads or accounts required.
+      </p>
+    </footer>
+  </main>
+  <div
+    id="promotion-modal"
+    class="modal-backdrop"
+    hidden
+  >
+    <div
+      class="promotion-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="promotion-title"
+    >
+      <h2 id="promotion-title">
+        Choose a promotion
+      </h2>
+
+      <p>
+        Your pawn reached the other side.
+      </p>
+
+      <div
+        id="promotion-options"
+        class="promotion-options"
+      ></div>
+    </div>
+  </div>
+
+</body>
+</html>
